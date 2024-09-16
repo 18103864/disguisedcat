@@ -164,10 +164,10 @@ AddParts(eyesList, 'eyes',1, 'mememaker-assets/img/icons/eyes/1.png', 'mememaker
 AddParts(eyesList, 'eyes',2, 'mememaker-assets/img/icons/eyes/2.png', 'mememaker-assets/img/eyes/2.png');
 AddParts(eyesList, 'eyes',3, 'mememaker-assets/img/icons/eyes/3.png', 'mememaker-assets/img/eyes/3.png');
 AddParts(eyesList, 'eyes',4, 'mememaker-assets/img/icons/eyes/4.png', 'mememaker-assets/img/eyes/4.png');
-// AddParts(eyesList, 'eyes',5, 'mememaker-assets/img/icons/eyes/5.png', 'mememaker-assets/img/eyes/5.png');
-// AddParts(eyesList, 'eyes',6, 'mememaker-assets/img/icons/eyes/6.png', 'mememaker-assets/img/eyes/6.png');
-// AddParts(eyesList, 'eyes',7, 'mememaker-assets/img/icons/eyes/007.png', 'mememaker-assets/img/eyes/007.png');
-// AddParts(eyesList, 'eyes',8, 'mememaker-assets/img/icons/eyes/008.png', 'mememaker-assets/img/eyes/008.png');
+AddParts(eyesList, 'eyes',5, 'mememaker-assets/img/icons/eyes/5.png', 'mememaker-assets/img/eyes/5.png');
+AddParts(eyesList, 'eyes',6, 'mememaker-assets/img/icons/eyes/6.png', 'mememaker-assets/img/eyes/6.png');
+AddParts(eyesList, 'eyes',7, 'mememaker-assets/img/icons/eyes/7.png', 'mememaker-assets/img/eyes/7.png');
+// AddParts(eyesList, 'eyes',8, 'mememaker-assets/img/icons/eyes/8.png', 'mememaker-assets/img/eyes/8.png');
 
 AddParts(mouthList, 'mouth',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(mouthList, 'mouth',1, 'mememaker-assets/img/icons/mouth/1.png', 'mememaker-assets/img/mouth/1.png');

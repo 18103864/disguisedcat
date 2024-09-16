@@ -128,11 +128,12 @@ h1 {
 }
 
 #mainCanvas {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 600px;
     border: 5px solid rgb(254, 255, 254);
     border-radius: 10px;
     margin-bottom: 3rem;
+    margin-left: 15%;
 }
 
 .buttons {

@@ -196,31 +196,31 @@ AddParts(bgList, 'bg', 10, 'mememaker-assets/img/icons/background/10.png', 'meme
 
 const canvas = document.getElementById('mainCanvas');
 canvas.width = 400;
-canvas.height = 400;
+canvas.height = 600;
 const context = canvas.getContext('2d');
 
 setInterval(() => {
     context.fillStyle = 'black';
-    context.fillRect(0, 0, 400, 400);
+    context.fillRect(0, 0, 400, 600);
 
     if(current_bg != undefined) {
-        context.drawImage(current_bg, 0, 0, 400, 400 );
+        context.drawImage(current_bg, 0, 0, 400, 600 );
     }
 
     if(current_body != undefined) {
-        context.drawImage(current_body, 0, 0, 400, 400 );
+        context.drawImage(current_body, 0, 0, 400, 600 );
     }
 
     if(current_head != undefined) {
-        context.drawImage(current_head, 0, 0, 400, 400 );
+        context.drawImage(current_head, 0, 0, 400, 600 );
     }
 
     if(current_buddy != undefined) {
-        context.drawImage(current_buddy, 0, 0, 400, 400 );
+        context.drawImage(current_buddy, 0, 0, 400, 600 );
     }
 
     if(current_eyes != undefined) {
-        context.drawImage(current_eyes, 0, 0, 400, 400 );
+        context.drawImage(current_eyes, 0, 0, 400, 600 );
     }
     
     // if(current_bottom != undefined) {
@@ -228,7 +228,7 @@ setInterval(() => {
     // }
 
     if(current_top != undefined) {
-        context.drawImage(current_top, 0, 0, 400, 400 );
+        context.drawImage(current_top, 0, 0, 400, 600 );
     }
 }, 100);
 

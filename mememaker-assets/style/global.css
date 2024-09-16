@@ -1,35 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 
 :root {
-    --hot-pink: #EF476F;
-    --light-pink: #ff99cc;
+    --hot-pink: #0011fc;
+    --light-pink: #6aaff0;
 }
 
 * {
-    font-family: "Bowlby One", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('../img/bg.png'); /* Path to your image */
-    z-index: -1; /* Ensure it stays behind other content */
 }
 
 body {
-    background-color: #000;
-    margin: 0;
     overflow: hidden;
-    position: relative;
-    padding: 1rem;
+    overflow-y: auto;
+    background-image: url('../img/bg.png');
+    margin-bottom: 5rem;
+    color: var(--hot-pink);
 }
 
 .navbar {
@@ -62,10 +51,11 @@ body {
     color: white;
     font-size: 5rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: "Bowlby One", sans-serif;
 }
 
 .navbar-brand:hover {
-    color: #37f7ff;
+    color: var(--orange);
 }
 
 h1 {
@@ -112,13 +102,18 @@ h1 {
 }
 
 .right-view {
-    background-color: lightsteelblue;
+    background-color: rgb(113, 245, 245);
     padding: 5%;
 }
 
 .left-view {
-    background-color: white;
+    background-color: rgb(113, 245, 245);
     padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 
@@ -133,7 +128,7 @@ h1 {
     border: 5px solid rgb(254, 255, 254);
     border-radius: 10px;
     margin-bottom: 3rem;
-    margin-left: 15%;
+    display: block;
 }
 
 .buttons {
@@ -143,8 +138,8 @@ h1 {
 
 #reset-btn, #random-btn, #download-btn {
     margin: 0rem 1rem;
-    font-size: 1rem;
-    color: darkblue;
+    font-size: 1.5rem;
+    color: var(--hot-pink);
     display: inline-block;
 }
 
@@ -294,9 +289,9 @@ h1 {
 }
 
 .parts-selected {
-    border: 3px solid #00008B;
-    background-color: lightgray;
-    box-shadow: 0px 0px 5px 5px lightskyblue;
+    border: 3px solid var(--hot-pink);
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px var(--light-pink);
 }
 
 .sns {
@@ -328,6 +323,7 @@ h1 {
         font-size: 1.8rem;
         margin: 1rem;
     }
+    
 
     h1 {
         font-size: 2rem;
@@ -341,6 +337,7 @@ h1 {
 
     #mainCanvas {
         width: 80%;
+        height: 80%;
         margin: auto;
     }
 
@@ -381,6 +378,7 @@ h1 {
 
     #mainCanvas {
         width: 80%;
+        height: 80%;
         margin: auto;
     }
 

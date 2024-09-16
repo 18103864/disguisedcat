@@ -153,11 +153,11 @@ AddParts(headList, 'head',4, 'mememaker-assets/img/icons/head/4.png', 'mememaker
 AddParts(headList, 'head',5, 'mememaker-assets/img/icons/head/5.png', 'mememaker-assets/img/head/5.png');
 AddParts(headList, 'head',6, 'mememaker-assets/img/icons/head/6.png', 'mememaker-assets/img/head/6.png');
 AddParts(headList, 'head',7, 'mememaker-assets/img/icons/head/7.png', 'mememaker-assets/img/head/7.png');
-// AddParts(headList, 'head',8, 'mememaker-assets/img/icons/head/008.png', 'mememaker-assets/img/head/008.png');
-// AddParts(headList, 'head',9, 'mememaker-assets/img/icons/head/009.png', 'mememaker-assets/img/head/009.png');
-// AddParts(headList, 'head',10, 'mememaker-assets/img/icons/head/010.png', 'mememaker-assets/img/head/010.png');
-// AddParts(headList, 'head',11, 'mememaker-assets/img/icons/head/011.png', 'mememaker-assets/img/head/011.png');
-// AddParts(headList, 'head',12, 'mememaker-assets/img/icons/head/012.png', 'mememaker-assets/img/head/012.png');
+AddParts(headList, 'head',8, 'mememaker-assets/img/icons/head/8.png', 'mememaker-assets/img/head/8.png');
+AddParts(headList, 'head',9, 'mememaker-assets/img/icons/head/9.png', 'mememaker-assets/img/head/9.png');
+AddParts(headList, 'head',10, 'mememaker-assets/img/icons/head/10.png', 'mememaker-assets/img/head/10.png');
+AddParts(headList, 'head',11, 'mememaker-assets/img/icons/head/11.png', 'mememaker-assets/img/head/11.png');
+AddParts(headList, 'head',12, 'mememaker-assets/img/icons/head/12.png', 'mememaker-assets/img/head/12.png');
 
 AddParts(eyesList, 'eyes',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(eyesList, 'eyes',1, 'mememaker-assets/img/icons/eyes/1.png', 'mememaker-assets/img/eyes/1.png');
@@ -273,7 +273,7 @@ resetBtn.onclick = () => {
 const randomBtn = document.getElementById('random-btn');
 
 randomBtn.onclick = () => {
-    const randHead = randRange(0, 7);
+    const randHead = randRange(0, 12);
     const randEyes = randRange(0, 4);
     const randMouth = randRange(0, 2);
     //  const randBg = randRange(1, 8);

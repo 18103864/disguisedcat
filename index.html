@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>$DC - Meme Generator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+          <!--=============== FAVICON ===============-->
+          <link rel="icon" type="image/png" href="mememaker-assets/img/bg.png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+        <link href="https://remixicon.com/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="mememaker-assets/style/main.css">
+        <link rel="stylesheet" href="mememaker-assets/style/global.css">
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+          <!-- 
+            - google font link
+        -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet"> -->
+    </head>
+    <body oncontextmenu="return false">
+        <div class="container">
+            <!-- <div class="navbar">
+                <div class="logo-text"><a href="https://www.DonBillsorian.xyz" target="_blank">$BILLS</a></div>
+                <div class="nav__social">
+                    <a href="" class="nav__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="" target="_blank" class="nav__social-link">
+                        <i class="ri-instagram-fill"></i>
+                     </a>
+                    <a href="" class="nav__social-link">
+                        <i class="ri-telegram-fill"></i>
+                    </a>
+                </div>
+            </div> -->
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <!-- Move the brand and navbar-toggler to separate flex containers -->
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <!-- Brand -->
+                    <a class="navbar-brand title" href="../index.html">$DBILLY</a>
+                    <!-- Navbar Toggler Button -->
+                    <!-- <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                    <div class="d-flex flex-row-reverse w-100">
+                      </div>
+                  </div>
+              
+                  <!-- Collapsible Navbar Content -->
+                  <!-- <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link text-light" href="#"><i class="ri-twitter-fill"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light" href="#"><i class="ri-instagram-fill"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled text-light" aria-disabled="true"><i class="ri-telegram-fill"></i></a>
+                      </li>
+                    </ul>
+                  </div> -->
+                </div>
+              </nav>
+              
+
+            <!-- <h1>MAKE YOUR OWN DON!</h1> -->
+            <!-- <div class="main-view-wrap"> -->
+            
+            <div class="container">
+                
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-12 col-lg-6">
+                    <div class="left-view">
+                        <canvas id="mainCanvas"></canvas>
+                        <div class="buttons">
+                            <a id="reset-btn"><img src="mememaker-assets/img/reset.png">Reset</a>
+                            <a id="random-btn"><img src="mememaker-assets/img/dice.png">Random</a>
+                            <a id="download-btn"><img src="mememaker-assets/img/download.png">Download</a>
+                        </div>
+                        <!-- <div class="light-button" id="reset-btn">
+                            <img src="mememaker-assets/img/reset.png">
+                        </div>
+                        <div class="light-button" id="random-btn">
+                            <img src="mememaker-assets/img/dice.png">
+                        </div>
+                        <div class="dark-button" id="download-btn">
+                            <img src="mememaker-assets/img/download.png">
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="right-view">
+                        <div class="header">Make Your Own Cock!</div>
+                        <div class="don">
+                            <div class="section-header">BODY</div>
+                            <div class="selector">
+                                <div class="dir-button" id="body-left">◀</div>
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="body-list">
+                                    </div>
+                                </div>
+                                <div class="dir-button" id="body-right">▶</div>
+                            </div>
+                        </div>
+    
+                        <div class="section-header hide">HEAD</div>
+                        <div class="selector hide">
+                            <div class="dir-button" id="head-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="head-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="head-right">▶</div>
+                        </div>
+                        
+                        <div class="section-header hide">EYES</div>
+                        <div class="selector hide">
+                            <div class="dir-button" id="eyes-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="eyes-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="eyes-right">▶</div>
+                        </div>
+                        
+                        <div class="section-header hide">MOUTH</div>
+                        <div class="selector hide">
+                            <div class="dir-button" id="mouth-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="mouth-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="mouth-right">▶</div>
+                        </div>
+
+                        <div class="section-header hide">top</div>
+                        <div class="selector hide">
+                            <div class="dir-button" id="top-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="top-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="top-right">▶</div>
+                        </div>
+    
+                        <div class="section-header">bottom</div>
+                        <div class="selector">
+                            <div class="dir-button" id="bottom-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="bottom-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="bottom-right">▶</div>
+                        </div>
+                        
+                        <div class="section-header">BACKGROUND</div>
+                        <div class="selector">
+                            <div class="dir-button" id="bg-left">◀</div>
+                            <div class="parts-wrap">
+                                <div class="parts-list" id="bg-list">
+                                </div>
+                            </div>
+                            <div class="dir-button" id="bg-right">▶</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-12 col-lg-6">
+                    <div class="right-view">
+                        <div class="category-buttons">
+                            <!-- <button data-category="body">Body</button> -->
+                            <button class="categories" data-category="head"><img src="mememaker-assets/img/categories/head.png" alt="image"></button>
+                            <button class="categories" data-category="eyes"><img src="mememaker-assets/img/categories/eyes.png" alt="image"></button>
+                            <!-- <button class="categories" data-category="mouth"><img src="mememaker-assets/img/categories/mouth.png" alt="image"></button> -->
+                            <button class="categories" data-category="top"><img src="mememaker-assets/img/categories/top.png" alt="image"></button> 
+                            <button class="categories" data-category="buddy"><img src="mememaker-assets/img/categories/buddy.png" alt="image"></button>
+                            <button class="categories" data-category="background"><img src="mememaker-assets/img/categories/background.png" alt="image"></button>
+                        </div>
+                        <div class="selector-container">
+                            <div class="selector" id="body">
+                                <div class="section-header">BODY</div>
+                                <div class="dir-button" id="body-left">◀</div>
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="body-list"></div>
+                                </div>
+                                <div class="dir-button" id="body-right">▶</div>
+                            </div>
+                            <div class="selector" id="head">
+                                <div class="">
+                                    <div class="parts-list" id="head-list"></div>
+                                </div>
+                            </div>
+                            <div class="selector" id="eyes">
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="eyes-list"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="selector" id="buddy">
+                                
+                                
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="buddy-list"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="selector" id="top">
+                                
+                                
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="top-list"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="selector" id="bottom">
+                                
+                                
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="bottom-list"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="selector" id="background">
+                                <div class="parts-wrap">
+                                    <div class="parts-list" id="bg-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+                
+            <!-- <div class="border-bar"></div> -->
+                
+            <!-- </div> -->
+        </div>
+
+        <script src="mememaker-assets/scripts/script.js"></script>
+    </body>
+</html>

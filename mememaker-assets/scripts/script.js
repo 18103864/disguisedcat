@@ -267,7 +267,7 @@ randomBtn.onclick = () => {
 const downloadBtn = document.getElementById('download-btn');
 downloadBtn.onclick = () => {
     var link = document.createElement('a');
-    link.download = 'dbilly.png';
+    link.download = 'dc.png';
     link.href = canvas.toDataURL()
     link.click();
 }

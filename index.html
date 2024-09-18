@@ -1,128 +1,123 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>$DC - Meme Maker</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-          <!--=============== FAVICON ===============-->
-          <link rel="icon" type="image/png" href="mememaker-assets/img/base.png">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Loading Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(bg.png);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .loader {
+            display: flex;
+            justify-content: space-around;
+            width: 300px; /* Adjust width as needed */
+            height: 100px;
+        }
+        .cat {
+            width: 100px;
+            height: 100px;
+            background: url('base.png') no-repeat center/contain;
+            animation: jump 1s infinite;
+        }
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: translateY(0); }
+            50% { opacity: 0.7; transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="cat" style="background-image: url('base.png');"></div>
+        <div class="cat" style="background-image: url('base.png');"></div>
+        <div class="cat" style="background-image: url('base.png');"></div>
+    </div>
+    <div class="loading-text">Preparing Cat Disguises...</div>
 
-        <!--=============== REMIXICONS ===============-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-        <link href="https://remixicon.com/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="mememaker-assets/style/main.css">
-        <link rel="stylesheet" href="mememaker-assets/style/global.css">
-        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Redirect to the main page after 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+            window.location.href = '/mememaker/index.html'; // Change to your main page URL
+        }, 5000);
+    </script>
 
-
-    </head>
-    <body oncontextmenu="return false">
-        <div class="container">
-
-
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-
-                  <div class="d-flex justify-content-between align-items-center w-100">
-
-                    <a class="navbar-brand" href="https://discat.site/">$DC</a>
-
-                    <div class="d-flex flex-row-reverse w-100">
-                      </div>
-                  </div>
-              
-
-                </div>
-              </nav>
-              
-
-            
-            <div class="container">
-                
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-lg-6">
-                    <div class="left-view">
-                        <canvas id="mainCanvas"></canvas>
-                        <div class="buttons">
-                            <a id="reset-btn"><img src="mememaker-assets/img/reset.png">Reset</a>
-                            <a id="random-btn"><img src="mememaker-assets/img/dice.png">Random</a>
-                            <a id="download-btn"><img src="mememaker-assets/img/download.png">Download</a>
-                        </div>
-
-                    </div>
-                </div>
-                
-                <div class="col-md-12 col-lg-6">
-                    <div class="right-view">
-                        <div class="category-buttons">
-                            <!-- <button data-category="body">Body</button> -->
-                            <button class="categories" data-category="head"><img src="mememaker-assets/img/categories/head.png" alt="image"></button>
-                            <button class="categories" data-category="eyes"><img src="mememaker-assets/img/categories/eyes.png" alt="image"></button>
-                            <!-- <button class="categories" data-category="mouth"><img src="mememaker-assets/img/categories/mouth.png" alt="image"></button> -->
-                            <button class="categories" data-category="mouth"><img src="mememaker-assets/img/categories/mouth.png" alt="image"></button>
-                            <button class="categories" data-category="top"><img src="mememaker-assets/img/categories/top.png" alt="image"></button>
-                            <button class="categories" data-category="background"><img src="mememaker-assets/img/categories/background.png" alt="image"></button>
-                        </div>
-                        <div class="selector-container">
-                            <div class="selector" id="body">
-                                <div class="section-header">BODY</div>
-                                <div class="dir-button" id="body-left">◀</div>
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="body-list"></div>
-                                </div>
-                                <div class="dir-button" id="body-right">▶</div>
-                            </div>
-                            <div class="selector" id="head">
-                                <div class="">
-                                    <div class="parts-list" id="head-list"></div>
-                                </div>
-                            </div>
-                            <div class="selector" id="eyes">
-                                
-                                
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="eyes-list"></div>
-                                </div>
-                                
-                            </div>
-                            <div class="selector" id="mouth">
-                                
-                                
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="mouth-list"></div>
-                                </div>
-                                
-                            </div>
-                            <div class="selector" id="top">
-                                
-                                
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="top-list"></div>
-                                </div>
-                                
-                            </div>
-                            <div class="selector" id="bottom">
-                                
-                                
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="bottom-list"></div>
-                                </div>
-                                
-                            </div>
-                            <div class="selector" id="background">
-                                <div class="parts-wrap">
-                                    <div class="parts-list" id="bg-list"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-
-        <script src="mememaker-assets/scripts/script.js"></script>
-    </body>
+</body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Loading Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('bg.png');
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .loader {
+            display: flex;
+            justify-content: space-around;
+            width: 300px; /* Adjust width as needed */
+            height: 100px;
+        }
+        .cat {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            animation: jump 1s infinite, changeCat 3s infinite;
+        }
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes changeCat {
+            0% { background-image: url('base.png'); }
+            33% { background-image: url('base.png'); }
+            66% { background-image: url('base.png'); }
+            100% { background-image: url('base.png'); }
+        }
+        .loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: translateY(0); }
+            50% { opacity: 0.7; transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="cat"></div>
+        <div class="cat"></div>
+        <div class="cat"></div>
+    </div>
+    <div class="loading-text">Preparing Cat Disguises...</div>
+</body>
+</html> -->

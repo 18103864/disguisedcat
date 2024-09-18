@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 
 :root {
-    --hot-pink: #0011fc;
+    --hot-pink: #0077b6;
     --light-pink: #6aaff0;
 }
 
@@ -102,18 +102,20 @@ h1 {
 }
 
 .right-view {
-    background-color: rgb(113, 245, 245);
+    background-color: #90e0ef;
     padding: 5%;
+    border-radius: 5%;
 }
 
 .left-view {
-    background-color: rgb(113, 245, 245);
+    background-color: #90e0ef;
     padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    border-radius: 10%;
 }
 
 
@@ -356,6 +358,14 @@ h1 {
         margin: auto;
     }
 
+    .left-view{
+        border-radius: 2rem 2rem 0rem 0rem;
+    }
+
+    .right-view{
+        border-radius: 0rem 0rem 2rem 2rem;
+    }
+
     .dir-button {
         width: 10%;
     }
@@ -399,6 +409,13 @@ h1 {
 
     .dir-button {
         width: 10%;
+    }
+    .left-view{
+        border-radius: 2rem 2rem 0rem 0rem;
+    }
+
+    .right-view{
+        border-radius: 0rem 0rem 2rem 2rem;
     }
 }
 

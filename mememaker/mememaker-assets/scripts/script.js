@@ -297,17 +297,46 @@ downloadBtn.onclick = () => {
 }
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const buttons = document.querySelectorAll('.category-buttons button');
+//     const selectors = document.querySelectorAll('.selector');
+
+//     buttons.forEach(button => {
+//         button.addEventListener('click', function() {
+//             selectors.forEach(selector => selector.classList.remove('active'));
+//             document.getElementById(button.dataset.category).classList.add('active');
+//         });
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.category-buttons button');
     const selectors = document.querySelectorAll('.selector');
 
+    // Function to activate a category
+    function activateCategory(button) {
+        selectors.forEach(selector => selector.classList.remove('active'));
+        document.getElementById(button.dataset.category).classList.add('active');
+
+        // Remove active class from all buttons and add to the clicked one
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    }
+
+    // Automatically select the "head" category on page load
+    const defaultCategory = document.querySelector('button[data-category="head"]');
+    if (defaultCategory) {
+        activateCategory(defaultCategory); // Activate the "head" category by default
+    }
+
+    // Add event listener to each button for manual category selection
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            selectors.forEach(selector => selector.classList.remove('active'));
-            document.getElementById(button.dataset.category).classList.add('active');
+            activateCategory(button); // Activate the selected category
         });
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const categoryButtons = document.querySelectorAll('.categories');

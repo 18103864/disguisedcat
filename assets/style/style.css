@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,31 +10,31 @@ body {
     height: 100vh;
     background-image: url(../img/bg.png);
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Bowlby One", sans-serif;
 }
 .loader {
     display: flex;
     justify-content: space-around;
-    width: 300px; /* Adjust width as needed */
-    height: 100px;
+    width: 500px; /* Adjust width as needed */
+    height: 200px;
 }
 .cat {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background: url('../img/base.png') no-repeat center/contain;
     animation: jump 1s infinite, changeCat 6s infinite;
 }
 
 .cat1 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background: url('../img/base.png') no-repeat center/contain;
     animation: jump 1s infinite, changeCat1 6s infinite;
 }
 
 .cat2 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background: url('../img/base.png') no-repeat center/contain;
     animation: jump 1s infinite, changeCat2 6s infinite;
 }
@@ -59,8 +63,8 @@ body {
 }
 .loading-text {
     margin-top: 20px;
-    font-size: 20px;
-    color: #333;
+    font-size: 30px;
+    color: #0077b6;
     animation: pulse 1s infinite;
 }
 @keyframes pulse {
